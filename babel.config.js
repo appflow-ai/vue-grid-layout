@@ -1,9 +1,9 @@
 module.exports = {
     presets: [
-        '@vue/app',
-        '@babel/preset-env'
+        '@vue/cli-plugin-babel/preset'
     ],
-    "plugins": [
-        "transform-flow-comments"
+    plugins: [
+        "transform-flow-comments",
+        ["transform-remove-console", { "exclude": [ "error", "warn"] }]
     ]
 }
